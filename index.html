@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>刘娜 · 数据分析师 · 个人简历</title>
+<meta name="description" content="刘娜的个人简历，广东科技学院大数据管理与应用专业本科在读，求职意向数据分析师。">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --deep: #0b2340;
+    --deep-2: #123a5e;
+    --blue: #1c5580;
+    --blue-soft: #3f80ab;
+    --ink: #10273c;
+    --ink-2: #2d4a63;
+    --ink-3: #5a7a95;
+    --line: #d3e0ec;
+    --tint: #edf4fa;
+    --paper: #ffffff;
+    --bg: #e4ecf4;
+  }
+
+  body {
+    font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Source Han Sans SC", "Noto Sans CJK SC", sans-serif;
+    background: var(--bg);
+    color: var(--ink-2);
+    line-height: 1.75;
+    font-size: 14px;
+    padding: 32px 16px 56px;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .sheet {
+    max-width: 840px;
+    margin: 0 auto;
+    background: var(--paper);
+    box-shadow: 0 2px 4px rgba(11, 35, 64, .06), 0 16px 48px rgba(11, 35, 64, .16);
+    border-radius: 4px;
+    overflow: hidden;
+  }
+
+  /* ================= 头部：深蓝主块 ================= */
+  .masthead {
+    position: relative;
+    padding: 44px 52px 34px;
+    background: linear-gradient(150deg, #0a1f38 0%, #123a5e 52%, #1b5480 100%);
+    color: #fff;
+    overflow: hidden;
+  }
+  .masthead::after {
+    content: "";
+    position: absolute;
+    right: -80px; top: -70px;
+    width: 250px; height: 250px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(96, 158, 202, .30) 0%, rgba(96, 158, 202, 0) 70%);
+  }
+  .mrow {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 24px;
+    flex-wrap: wrap;
+  }
+  .who { min-width: 210px; }
+  .name {
+    font-size: 36px;
+    font-weight: 700;
+    letter-spacing: 10px;
+    line-height: 1.25;
+    color: #fff;
+  }
+  .name-en {
+    margin-top: 5px;
+    font-size: 10.5px;
+    letter-spacing: 3.4px;
+    text-transform: uppercase;
+    color: #8fb6d4;
+  }
+  .title-chip {
+    margin-top: 18px;
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    font-size: 12.5px;
+    color: #cfe2f0;
+    letter-spacing: .5px;
+    background: rgba(255, 255, 255, .08);
+    border: 1px solid rgba(143, 182, 212, .35);
+    padding: 5px 14px 5px 12px;
+    border-radius: 2px;
+  }
+  .title-chip b { font-weight: 600; color: #fff; letter-spacing: 1px; }
+
+  .contact {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    font-size: 13px;
+    color: #d3e4f0;
+    padding-top: 10px;
+    text-align: right;
+  }
+  .contact span {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 8px;
+  }
+  .contact span::before {
+    content: "";
+    width: 5px; height: 1px;
+    background: #6f9dc0;
+    flex: none;
+  }
+
+  /* ================= 正文 ================= */
+  main { padding: 4px 52px 46px; }
+  section { padding-top: 28px; }
+
+  .s-head {
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+    padding-bottom: 9px;
+    margin-bottom: 17px;
+    border-bottom: 1px solid var(--line);
+    position: relative;
+  }
+  .s-head::after {
+    content: "";
+    position: absolute;
+    left: 0; bottom: -1px;
+    width: 54px; height: 2px;
+    background: var(--deep-2);
+  }
+  .s-head h2 {
+    position: relative;
+    font-size: 15.5px;
+    font-weight: 700;
+    color: var(--deep);
+    letter-spacing: 3px;
+    padding-left: 13px;
+  }
+  .s-head h2::before {
+    content: "";
+    position: absolute;
+    left: 0; top: 50%;
+    transform: translateY(-50%);
+    width: 3px; height: 15px;
+    background: var(--deep-2);
+    border-radius: 1px;
+  }
+  .s-head em {
+    font-style: normal;
+    font-size: 10.5px;
+    letter-spacing: 2.4px;
+    text-transform: uppercase;
+    color: #a3b8ca;
+  }
+
+  .lede {
+    font-size: 13.8px;
+    color: var(--ink-2);
+    line-height: 1.95;
+    padding: 14px 18px;
+    background: linear-gradient(90deg, var(--tint) 0%, rgba(237, 244, 250, .25) 100%);
+    border-left: 3px solid var(--deep-2);
+    border-radius: 0 3px 3px 0;
+  }
+  .lede mark { background: none; color: var(--deep); font-weight: 600; }
+
+  /* 教育 */
+  .edu-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 6px 16px;
+    flex-wrap: wrap;
+  }
+  .edu-school { font-size: 16px; font-weight: 700; color: var(--deep); letter-spacing: .6px; }
+  .edu-when { font-size: 12.5px; color: var(--ink-3); font-variant-numeric: tabular-nums; }
+  .edu-major {
+    margin-top: 6px;
+    font-size: 13.5px;
+    color: var(--blue);
+    font-weight: 600;
+    letter-spacing: .4px;
+  }
+  .chips { margin-top: 13px; display: flex; flex-wrap: wrap; gap: 8px; }
+  .chip {
+    font-size: 12px;
+    color: #fff;
+    background: var(--deep-2);
+    padding: 3px 11px;
+    border-radius: 2px;
+    letter-spacing: .4px;
+    opacity: .92;
+  }
+  .chip:nth-child(even) { background: #35678f; }
+
+  /* 技能 */
+  .skill-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+  .skill-cell {
+    background: var(--tint);
+    border-left: 3px solid var(--deep-2);
+    padding: 14px 16px;
+    border-radius: 0 3px 3px 0;
+  }
+  .skill-cell h3 {
+    font-size: 13.2px;
+    font-weight: 700;
+    color: var(--deep);
+    margin-bottom: 5px;
+    letter-spacing: .5px;
+  }
+  .skill-cell p { font-size: 12.8px; color: var(--ink-3); line-height: 1.75; }
+
+  /* 时间轴 */
+  .timeline { position: relative; padding-left: 22px; }
+  .timeline::before {
+    content: "";
+    position: absolute;
+    left: 4px; top: 6px; bottom: 4px;
+    width: 2px;
+    background: linear-gradient(#123a5e, #c3d6e5);
+    border-radius: 1px;
+  }
+  .tl-item { position: relative; padding-bottom: 22px; }
+  .tl-item:last-child { padding-bottom: 0; }
+  .tl-item::before {
+    content: "";
+    position: absolute;
+    left: -22px; top: 7px;
+    width: 10px; height: 10px;
+    border-radius: 50%;
+    background: var(--deep-2);
+    box-shadow: 0 0 0 3px #fff;
+  }
+  .tl-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 6px 16px;
+    flex-wrap: wrap;
+  }
+  .tl-org { font-size: 14.5px; font-weight: 700; color: var(--deep); letter-spacing: .4px; }
+  .tl-role {
+    font-size: 11.5px;
+    color: #fff;
+    background: var(--blue);
+    padding: 1px 9px;
+    border-radius: 2px;
+    margin-left: 8px;
+    font-weight: 500;
+    letter-spacing: .4px;
+  }
+  .tl-when { font-size: 12.5px; color: var(--ink-3); font-variant-numeric: tabular-nums; }
+  .tl-proj { font-size: 12.5px; color: var(--blue-soft); margin-top: 4px; font-weight: 500; }
+  .tl-body { margin-top: 8px; }
+  .tl-body li {
+    position: relative;
+    list-style: none;
+    padding-left: 14px;
+    font-size: 13.2px;
+    line-height: 1.8;
+    color: var(--ink-2);
+    margin-bottom: 4px;
+  }
+  .tl-body li::before {
+    content: "";
+    position: absolute;
+    left: 1px; top: 10px;
+    width: 5px; height: 5px;
+    background: #8fb0c8;
+    transform: rotate(45deg);
+  }
+  .tl-body li:last-child { margin-bottom: 0; }
+
+  /* 自我评价 */
+  .eval { display: grid; gap: 0; border-top: 1px solid var(--line); }
+  .eval-row {
+    display: flex;
+    gap: 16px;
+    font-size: 13.2px;
+    line-height: 1.85;
+    color: var(--ink-2);
+    padding: 11px 0;
+    border-bottom: 1px solid var(--line);
+  }
+  .eval-row:last-child { border-bottom: none; padding-bottom: 0; }
+  .eval-key {
+    flex: none;
+    width: 78px;
+    font-size: 12.5px;
+    color: var(--deep);
+    font-weight: 700;
+    letter-spacing: .8px;
+    padding-top: 1px;
+  }
+
+  .foot {
+    background: var(--deep);
+    padding: 14px 52px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 11.5px;
+    color: #7fa1bd;
+    letter-spacing: 1.4px;
+  }
+
+  /* ================= 响应式 ================= */
+  @media (max-width: 640px) {
+    body { padding: 0 0 32px; background: var(--paper); }
+    .sheet { box-shadow: none; border-radius: 0; }
+    .masthead { padding: 34px 22px 28px; }
+    main { padding: 0 22px 32px; }
+    .name { font-size: 28px; letter-spacing: 6px; }
+    .contact { text-align: left; padding-top: 16px; }
+    .contact span { justify-content: flex-start; }
+    .skill-grid { grid-template-columns: 1fr; }
+    .foot { padding: 12px 22px; }
+    section { padding-top: 24px; }
+  }
+
+  /* ================= 打印 / A4 ================= */
+  @page { size: A4; margin: 10mm 0; }
+  @media print {
+    body { background: #fff; padding: 0; font-size: 12.6px; }
+    .sheet { box-shadow: none; max-width: 100%; border-radius: 0; }
+    .masthead { padding: 24px 34px 20px; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    main { padding: 0 34px 20px; }
+    section { padding-top: 17px; page-break-inside: avoid; }
+    .tl-item { page-break-inside: avoid; }
+    .name { font-size: 29px; }
+    .s-head { margin-bottom: 12px; }
+    .skill-cell { padding: 10px 13px; }
+    .foot { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  }
+</style>
+</head>
+<body>
+<div class="sheet">
+
+  <header class="masthead">
+    <div class="mrow">
+      <div class="who">
+        <div class="name">刘娜</div>
+        <div class="name-en">Liu Na</div>
+        <div class="title-chip">求职意向 <b>数据分析师</b></div>
+      </div>
+      <div class="contact">
+        <span>15812948135</span>
+        <span>3455813543@qq.com</span>
+        <span>广东 · 东莞</span>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- 个人简介 -->
+    <section>
+      <div class="s-head"><h2>个人简介</h2><em>Profile</em></div>
+      <p class="lede">
+        大数据管理与应用专业本科在读，专业课程与数据分析岗位高度对口，现正<mark>系统学习 Python 与数据分析基础</mark>，已能独立完成数据收集、清洗与分类汇总的完整流程。具备较强的逻辑思维与信息结构化能力，习惯把零散资料整理成条理清晰的表格与结论；同时在校内两个学生组织担任成员，负责调研执行与数据整理，做事认真细致、交付稳定，能在团队中承担基础数据处理与资料支撑工作。
+      </p>
+    </section>
+
+    <!-- 教育背景 -->
+    <section>
+      <div class="s-head"><h2>教育背景</h2><em>Education</em></div>
+      <div class="edu-top">
+        <div class="edu-school">广东科技学院</div>
+        <div class="edu-when">2026.09 — 2030.06</div>
+      </div>
+      <div class="edu-major">大数据管理与应用 · 本科 · 大一在读</div>
+      <div class="chips">
+        <span class="chip">Python 程序设计</span>
+        <span class="chip">数据基础</span>
+        <span class="chip">统计学基础</span>
+        <span class="chip">数据库基础</span>
+        <span class="chip">管理学原理</span>
+      </div>
+    </section>
+
+    <!-- 专业技能 -->
+    <section>
+      <div class="s-head"><h2>专业技能</h2><em>Skills</em></div>
+      <div class="skill-grid">
+        <div class="skill-cell">
+          <h3>Python 基础编程</h3>
+          <p>掌握变量、条件循环、函数、列表与字典等核心语法，可编写数据读取与简单清洗脚本。</p>
+        </div>
+        <div class="skill-cell">
+          <h3>数据处理与整理</h3>
+          <p>熟练使用 Excel 函数、数据透视与图表；正在学习 pandas 进行批量清洗与分类汇总。</p>
+        </div>
+        <div class="skill-cell">
+          <h3>分析与逻辑能力</h3>
+          <p>擅长信息归类与结构化表达，能对调研数据做初步统计，并提炼可支撑决策的结论。</p>
+        </div>
+        <div class="skill-cell">
+          <h3>办公与协作工具</h3>
+          <p>Word / Excel / PowerPoint 独立完成从资料整理、数据汇总到汇报材料输出的全流程。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 校园经历 -->
+    <section>
+      <div class="s-head"><h2>校园经历</h2><em>Campus Experience</em></div>
+      <div class="timeline">
+
+        <div class="tl-item">
+          <div class="tl-head">
+            <div class="tl-org">大学生科创社<span class="tl-role">部门成员</span></div>
+            <div class="tl-when">2026.10 — 至今</div>
+          </div>
+          <div class="tl-proj">职责方向：活动执行 · 信息汇总</div>
+          <ul class="tl-body">
+            <li>负责科创类活动的报名信息收集与名单核对，保证参与人员数据准确无误、可追溯。</li>
+            <li>建立活动资料与成果台账的整理规范，将分散信息按项目与时间维度归类为可复用表格模板。</li>
+            <li>配合部门完成活动复盘数据的初步统计，为后续活动排期与资源分配提供数据参考。</li>
+          </ul>
+        </div>
+
+        <div class="tl-item">
+          <div class="tl-head">
+            <div class="tl-org">就业创业部门<span class="tl-role">部门成员</span></div>
+            <div class="tl-when">2026.10 — 至今</div>
+          </div>
+          <div class="tl-proj">职责方向：调研执行 · 资料分析</div>
+          <ul class="tl-body">
+            <li>参与就业创业类活动的调研与资料收集，系统整理岗位信息、政策要点与活动反馈。</li>
+            <li>负责调研类任务的信息录入与初步统计，输出结构规范、可直接被团队使用的汇总表。</li>
+            <li>与部门成员协作推进任务落地，按节点交付，保证信息口径统一、进度可控。</li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 项目实践 -->
+    <section>
+      <div class="s-head"><h2>项目实践</h2><em>Projects</em></div>
+      <div class="timeline">
+
+        <div class="tl-item">
+          <div class="tl-head">
+            <div class="tl-org">学生消费行为数据整理与分析<span class="tl-role">个人项目</span></div>
+            <div class="tl-when">2026.11</div>
+          </div>
+          <div class="tl-proj">工具：Excel · Python</div>
+          <ul class="tl-body">
+            <li>围绕校园学生消费设计问卷并回收数据，按消费类型、金额区间建立分类维度。</li>
+            <li>使用 Excel 与 Python 完成缺失值处理、重复记录剔除与格式统一，形成可分析的数据表。</li>
+            <li>按维度输出汇总统计与可视化图表，归纳主要消费结构与分布特征，并整理为分析小结。</li>
+          </ul>
+        </div>
+
+        <div class="tl-item">
+          <div class="tl-head">
+            <div class="tl-org">社团活动参与情况调研统计<span class="tl-role">团队协作</span></div>
+            <div class="tl-when">2026.10 — 2026.11</div>
+          </div>
+          <div class="tl-proj">角色：数据收集与统计</div>
+          <ul class="tl-body">
+            <li>负责问卷发放与回收环节，跟进回收进度并完成数据录入与清洗。</li>
+            <li>统计参与人数、参与频次等核心指标，输出图表与简要分析报告。</li>
+            <li>成果由团队用于活动安排复盘，为下一阶段活动设计提供依据。</li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 自我评价 -->
+    <section>
+      <div class="s-head"><h2>自我评价</h2><em>About Me</em></div>
+      <div class="eval">
+        <div class="eval-row">
+          <div class="eval-key">学习能力</div>
+          <div>专业方向与求职目标一致，主动系统学习 Python 与数据分析基础，学习节奏稳定、目标明确。</div>
+        </div>
+        <div class="eval-row">
+          <div class="eval-key">工作习惯</div>
+          <div>做事认真细心，对数据准确性有较高要求；善于整理信息、梳理逻辑，能把复杂资料转化为清晰结构。</div>
+        </div>
+        <div class="eval-row">
+          <div class="eval-key">团队协作</div>
+          <div>待人真诚，具备良好的协作意识，能主动补位，配合团队完成调研、资料整理与数据汇总等任务。</div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <div class="foot">
+    <span>刘娜 · 数据分析师</span>
+    <span>RESUME</span>
+  </div>
+
+</div>
+</body>
+</html>
